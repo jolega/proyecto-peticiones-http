@@ -12,15 +12,17 @@ const obtenerChiste = async () => {
 
         if(!resp.ok) throw alert('no se puedo realizar la peticion')
   
-        const chiste = await resp.json();
-  
-        return chiste;
+        const {icon_url, id, value } =await resp.json();
+       
+        return  {
+            icon_url,
+            id, 
+            value 
+        };
 
     }catch (err) {
 
-        return{
-            id: 'No se encontro'
-        }
+        throw err
     }
 
 
