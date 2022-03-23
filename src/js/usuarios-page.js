@@ -45,7 +45,7 @@ const crearHtml = () => {
     //     "last_name": "Lawson",
     //     "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/follettkyle/128.jpg"
     // }
-const crearFilaUsuario = ( usuario ) => {
+const crearFilaUsuario = ( {email, first_name, last_name, avatar} ) => {
    
     tableBody =document.getElementById("bodyUsuarios")
     item++;
@@ -54,7 +54,7 @@ const crearFilaUsuario = ( usuario ) => {
     const html = `
         <td scope="col"> ${item}. </td>
         <td scope="col">  ${email} </td>
-        <td scope="col"> ${Michael}  ${Lawson}  </td>
+        <td scope="col"> ${first_name}  ${last_name}  </td>
         <td scope="col">
             <img class="img-thumbnail" src="${avatar}">
         </td>
@@ -71,11 +71,11 @@ const crearFilaUsuario = ( usuario ) => {
 export const init = async() => {
 
 
-    const usuarios= obtenerUsuarios();
+    const usuarios= await obtenerUsuarios();
     console.log(usuarios);
     crearHtml();
-
-   // crearFilaUsuario(usuario[0])
+    usuarios.forEach(usuario =>  crearFilaUsuario(usuario));
+   
 
     // Obtener la lista de usuarios usando el servicio creado
     // Por cada usuario, llamar la función crearFila (for, forEach)
