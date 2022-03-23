@@ -19,6 +19,10 @@ Webpack - mini	https://webpack.js.org/plugins/mini-css-extract-plugin/
 Webpack - file	https://v4.webpack.js.org/loaders/file-loader/
 Webpack - copy webpack	https://webpack.js.org/plugins/copy-webpack-plugin/
 
+# bootstrap 
+
+https://getbootstrap.com/docs/4.0/getting-started/introduction/
+
 # ejecucion 
 ```
     "build": "webpack --config webpack.prod.js",
