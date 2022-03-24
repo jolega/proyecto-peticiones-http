@@ -31,8 +31,9 @@ leer usuarios api
 
 # ejecucion 
 ```
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js",  npm run build
     "build:dev": "webpack --config webpack.config.js",
-    "start": "webpack serve --config webpack.config.js --open --port=8080"
+    "start": "webpack serve --config webpack.config.js --open --port=8080" npm start
 
+el dist se cambio por docs para publicar en git
 
