@@ -22,9 +22,17 @@ Webpack - copy webpack	https://webpack.js.org/plugins/copy-webpack-plugin/
 # bootstrap 
 
 https://getbootstrap.com/docs/4.0/getting-started/introduction/
+# partes
+
+carga de archivos por medio de api,
+crud de api,
+consumir api de chistes
+leer usuarios api
 
 # ejecucion 
 ```
     "build": "webpack --config webpack.prod.js",
     "build:dev": "webpack --config webpack.config.js",
     "start": "webpack serve --config webpack.config.js --open --port=8080"
+
+
